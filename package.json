@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "npm-publish": "yarn build yarn publish"
+    "npm-publish": "yarn build && yarn publish"
   },
   "repository": {
     "type": "git",
