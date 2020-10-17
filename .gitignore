@@ -1,3 +1,9 @@
+# Library
+node_modules
+*.log
+dist
+TODO.txt
+
 # Logs
 logs
 *.log
