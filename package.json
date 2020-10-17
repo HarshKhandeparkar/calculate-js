@@ -4,7 +4,8 @@
   "description": "A JavaScript library to calculate fractions, trigonomentric functions, and others to n-digits and return it as a string.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "npm-publish": "yarn build yarn publish"
   },
   "repository": {
     "type": "git",
