@@ -1,0 +1,25 @@
+{
+  "name": "precision",
+  "version": "0.0.1",
+  "description": "A JavaScript library to calculate fractions, trigonomentric functions, and others to n-digits and return it as a string.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshKhandeparkar/precision-js.git"
+  },
+  "keywords": [
+    "precision-js",
+    "typescript",
+    "math",
+    "precision-math-functions"
+  ],
+  "author": "HarshKhandeparkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HarshKhandeparkar/precision-js/issues"
+  },
+  "homepage": "https://github.com/HarshKhandeparkar/precision-js#readme"
+}
