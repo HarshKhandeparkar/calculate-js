@@ -1,5 +1,5 @@
 {
-  "name": "precision-js",
+  "name": "calculate-js",
   "version": "0.0.1",
   "description": "A JavaScript library to calculate fractions, trigonometric functions, and others to n-digits and return it as a string.",
   "main": "dist/index.js",
@@ -9,11 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarshKhandeparkar/precision-js.git"
+    "url": "git+https://github.com/HarshKhandeparkar/calculate-js.git"
   },
   "keywords": [
-    "precision-js",
+    "calculate-js",
     "typescript",
+    "javascript",
     "math",
     "precision-math-functions"
   ],
