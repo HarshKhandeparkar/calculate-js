@@ -1,4 +1,4 @@
-# Precision JS
+# Calculate JS
 A JavaScript library to calculate fractions, trigonometric functions, and others to n-digits and return it as a string.
 
 ### Table of Contents
