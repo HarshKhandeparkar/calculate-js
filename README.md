@@ -7,6 +7,7 @@ A JavaScript library to calculate fractions, trigonometric functions, and others
 
 ### Installation
 Install it via npm/yarn.
+`yarn add @harshkhandeparkar/calculate-js` or `npm i @harshkhandeparkar/calculate-js`
 
 ### Library
 This library exports the following functions:
