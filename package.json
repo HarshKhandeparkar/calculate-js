@@ -1,5 +1,5 @@
 {
-  "name": "precision",
+  "name": "precision-js",
   "version": "0.0.1",
   "description": "A JavaScript library to calculate fractions, trigonometric functions, and others to n-digits and return it as a string.",
   "main": "dist/index.js",
