@@ -10,6 +10,12 @@ Install it via npm/yarn.
 `yarn add @harshkhandeparkar/calculate-js` or `npm i @harshkhandeparkar/calculate-js`
 
 ### Library
+```js
+const { calculateFraction } = require('@harshkhandeparkar/calculate-js');
+
+calculateFraction(45, 46, 15) // '0.978260869565217'
+```
+
 This library exports the following functions:
 - [Calculate Fraction](#calculate-fraction)
 
