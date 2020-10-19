@@ -1,1 +1,1 @@
-export { calculateFraction } from './caclulate/fraction';
+export { calculateFraction } from './calculate/fraction';
