@@ -20,22 +20,20 @@ export function calculateFraction(
   let recurring = false; // Whether the number has started recurring
   let recurrencePosition: number = -1;
 
-    const lastNumerators: number[] = [ last ]; // A list of numerators that were generated in between, to check for recurrence
+  const lastNumerators: number[] = [ last ]; // A list of numerators that were generated in between, to check for recurrence
 
   /**
    * num/den (num < den)
    * = (1/10)((k*num + l)/den) = k/10 + l/den
    * Recursively do for l/den
    */
-
   for (let i = 0; i < numDig; i++) {
     ans += Math.floor(10*last/den); // Remove the largest multiple of n2 and separate it.
-
     last = (10*last)%den; // The left over numerator
 
     if (!recurring) {
       if (lastNumerators.indexOf(last) !== -1) {
-        recurrencePosition = i;
+        recurrencePosition = i + 1; // +1 since the next digit's numerator is checked
         recurring = true;
       }
       else lastNumerators.push(last);
@@ -47,8 +45,8 @@ export function calculateFraction(
   ans = ans.slice(0, decimalIndex) + '.' + ans.slice(decimalIndex);
 
   if (ans[0] == '.') {
-    ans = '0' + ans;
     recurrencePosition++;
+    ans = '0' + ans;
   }
 
   return {
