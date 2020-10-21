@@ -53,7 +53,7 @@ export function calculateFraction(
     answer: ans,
     recurrence: {
       isRecurring: recurring,
-      recurrencePosition
+      recurrencePosition: recurring ? recurrencePosition : -1
     }
   }
 }
