@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "npm-publish": "yarn build && yarn publish --access=public"
+    "test": "ts-node test/**/*.ts",
+    "npm-publish": "yarn test && yarn build && yarn publish --access=public"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,11 @@
   },
   "homepage": "https://github.com/HarshKhandeparkar/precision-js#readme",
   "devDependencies": {
+    "@types/tape": "^4.13.0",
+    "tape": "^5.0.1",
     "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "ts-node": "^9.0.0"
   }
 }
