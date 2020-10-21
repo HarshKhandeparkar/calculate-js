@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.calculateFraction = void 0;
 /**
  * Calculate fractions to n digits and return the answer as a string
  * @param num Numerator of the fraction.
@@ -45,4 +43,3 @@ function calculateFraction(num, den, numDig) {
         }
     };
 }
-exports.calculateFraction = calculateFraction;
