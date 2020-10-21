@@ -1,6 +1,6 @@
 {
   "name": "@harshkhandeparkar/calculate-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A JavaScript library to calculate fractions, trigonometric functions, and others to n-digits and return it as a string.",
   "main": "dist/index.js",
   "scripts": {
