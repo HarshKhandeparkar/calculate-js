@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "ts-node test/**/*.ts",
+    "test": "ts-node test/**/*.ts | tap-spec",
     "npm-publish": "yarn test && yarn build && yarn publish --access=public"
   },
   "repository": {
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/HarshKhandeparkar/precision-js#readme",
   "devDependencies": {
     "@types/tape": "^4.13.0",
+    "tap-spec": "^5.0.0",
     "tape": "^5.0.1",
     "typescript": "^4.0.3"
   },
