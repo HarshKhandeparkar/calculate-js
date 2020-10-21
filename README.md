@@ -42,6 +42,9 @@ It returns an object with the following properties.
   recurrence starts. This means that the digits beyond this will start looking similar to the existing digits. This doesn't necessarily mean that the digits before this define the whole sequence.
   Example: 1/3 = 0.333; Here the recurrencePosition is 2 since 3 is the first recurring digit
   (algorithm assumes that 33 is repeating instead of 3)
+
+  Returns -1 if not recurring
+  */
   }
 }
 ```
