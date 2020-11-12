@@ -26,5 +26,17 @@ test('Calculate Fraction', t =>{
     'Non Recurring Fraction Works'
   )
 
+  t.deepEqual(
+    calculateFraction(-1, 53, 10),
+    {
+      answer: '-0.0188679245',
+      recurrence: {
+        isRecurring: false,
+        recurrencePosition: -1
+      }
+    },
+    'Negative Fraction Works'
+  )
+
   t.end();
 })
