@@ -15,8 +15,11 @@ export function calculateFraction(
     recurrencePosition: number
   }
 }  {
+  const isNegative = Math.sign(num * den) === -1;
+  const absNum = Math.abs(num), absDen = Math.abs(den);
+
   let ans = '';
-  let last = num; // The last numerator
+  let last = absNum; // The last numerator
   let recurring = false; // Whether the number has started recurring
   let recurrencePosition: number = -1;
 
@@ -28,8 +31,8 @@ export function calculateFraction(
    * Recursively do for l/den
    */
   for (let i = 0; i < numDig; i++) {
-    ans += Math.floor(10*last/den); // Remove the largest multiple of n2 and separate it.
-    last = (10*last)%den; // The left over numerator
+    ans += Math.floor(10 * last / absDen); // Remove the largest multiple of n2 and separate it.
+    last = (10 * last) % absDen; // The left over numerator
 
     if (!recurring) {
       if (lastNumerators.indexOf(last) !== -1) {
@@ -41,13 +44,15 @@ export function calculateFraction(
   }
 
   // Insert decimal point .
-  const decimalIndex = num/den > 1 ? (Math.floor(num/den).toString().length) : 0;
+  const decimalIndex = absNum / absDen > 1 ? (Math.floor(absNum / absDen).toString().length) : 0;
   ans = ans.slice(0, decimalIndex) + '.' + ans.slice(decimalIndex);
 
   if (ans[0] == '.') {
     recurrencePosition++;
     ans = '0' + ans;
   }
+
+  if (isNegative) ans = '-' + ans;
 
   return {
     answer: ans,
