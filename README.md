@@ -22,6 +22,7 @@ calculateFraction(45, 46, 15).answer; // '0.978260869565217'
 
 This library exports the following functions:
 - [Calculate Fraction](#calculate-fraction)
+- [Add](#add)
 
 #### Calculate Fraction
 `calculateFraction(num, den, numDig) => object`
@@ -49,3 +50,10 @@ It returns an object with the following properties.
   }
 }
 ```
+
+#### Add
+`add(...numbers) => string`
+This function adds numbers of any precision in the form of a string and returns the answer as a string. Currently only works for positive numbers.
+
+Parameters:
+1. `...numbers`: Lots of strings to be added.
