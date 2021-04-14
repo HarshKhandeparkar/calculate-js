@@ -1,4 +1,5 @@
 import { validateAndNormalizeNumberString } from '../util/validate-and-normalize';
+import { truncateExtraZeros } from '../util/truncate';
 
 function addIntegralNumbers(num1: string, num2: string) {
   let answer = '';
@@ -94,5 +95,5 @@ export function add(...numbers: string[]) {
   let answer = addTwo(numbers[0], numbers[1]);
   for (let i = 2; i < numbers.length; i++) answer = addTwo(answer, numbers[i]);
 
-  return answer;
+  return truncateExtraZeros(answer);
 }
