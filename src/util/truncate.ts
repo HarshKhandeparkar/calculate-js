@@ -4,7 +4,8 @@ export function truncateExtraZeros(num: string) {
 
   if (isNegative) number = number.slice(1);
 
-  let answer = number.replace(/^0*/, '').replace(/0*$/, '');
+  let answer = number.replace(/^0*/, '');
+  if (answer.includes('.')) answer = answer.replace(/0*$/, '');
 
   if (answer.startsWith('.') || answer === '') answer = '0' + answer;
   if (answer.endsWith('.')) answer = answer.slice(0, answer.length - 1);
