@@ -9,7 +9,6 @@ export function parse(number: string): IParsedNumber {
   const integralPart = num.includes('.') ? num.split('.')[0] : num;
 
   return {
-    fullNumber: num,
     isNegative,
     integralPart,
     fractionalPart

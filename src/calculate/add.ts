@@ -1,5 +1,6 @@
-import { validateAndNormalizeNumberString } from '../util/validate-and-normalize';
 import { truncateExtraZeros } from '../util/truncate';
+import { parse } from '../util/parse';
+import { format } from '../util/format';
 
 function addIntegralNumbers(num1: string, num2: string) {
   let answer = '';
@@ -38,17 +39,17 @@ function addIntegralNumbers(num1: string, num2: string) {
  * @param number2
  */
 function addTwo(number1: string, number2: string): string {
-  const num1 = validateAndNormalizeNumberString(number1);
-  const num2 = validateAndNormalizeNumberString(number2);
+  const num1 = parse(number1);
+  const num2 = parse(number2);
 
   const fractionalParts: [string, string] = [
-    num1.includes('.') ? num1.split('.')[1] : '0',
-    num2.includes('.') ? num2.split('.')[1] : '0'
+    num1.fractionalPart,
+    num2.fractionalPart
   ]
 
   const integralParts: [string, string] = [
-    num1.includes('.') ? num1.split('.')[0] : num1,
-    num2.includes('.') ? num2.split('.')[0] : num2
+    num1.integralPart,
+    num2.integralPart
   ]
 
   let answerIntegralPart = '';
@@ -82,8 +83,11 @@ function addTwo(number1: string, number2: string): string {
     answerIntegralPart = addIntegralNumbers(answerIntegralPart, carryOver);
   }
 
-  if (answerFractionalPart === '0') return answerIntegralPart;
-  else return answerIntegralPart + '.' + answerFractionalPart;
+  return format({
+    integralPart: answerIntegralPart,
+    fractionalPart: answerFractionalPart,
+    isNegative: false
+  })
 }
 
 /**
