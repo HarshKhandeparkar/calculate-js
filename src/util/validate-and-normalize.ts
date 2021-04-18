@@ -6,12 +6,13 @@ import { truncateExtraZeros } from './truncate';
  */
 export function validateAndNormalizeNumberString(number: string) {
   if (
-    !number.split('').every((digit) => {
-      return !isNaN(Number(digit)) || digit === '.';
+    !number.split('').every((char) => {
+      return !isNaN(Number(char)) || char === '.' || char === '-';
     })
   ) throw 'Given string is not a number.';
 
   if (number.match(/\./g) && number.match(/\./g).length > 1) throw 'Given string is not a number.';
+  if (number.match(/\-/g) && number.match(/\-/g).length > 1) throw 'Given string is not a number.';
 
   return truncateExtraZeros(number);
 }
